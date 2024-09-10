@@ -1,0 +1,102 @@
+\documentclass[10pt]{stylesheet} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+\usepackage{helvet} % Default font is the helvetica postscript font
+%\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=red]{hyperref}
+\usepackage{hyperref,textcomp,fontawesome5,fancyhdr,hanging,enumitem}
+\usepackage[a4paper,
+            left=1in,
+            right=1in,
+            top=.75in,
+            bottom=.75in,
+            footskip=.25in]{geometry}
+\newsectionwidth{0pt} % Stops section indenting
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	NAME AND ADDRESS(ES)
+%----------------------------------------------------------------------------------------
+\name{HUW WILLIAM CHESTON}
+%----------------------------------------------------------------------------------------
+\begin{resume}
+%------------------------------------------------------------==--------------
+\centerline{\faEnvelope\href{mailto:hwc31@cam.ac.uk}{\underline{Email}} \hspace{4pt} $\mid$ \hspace{4pt} \faGlobe\href{https://huwcheston.github.io/}{\underline{Webpage}} \hspace{4pt} $\mid$ \hspace{4pt} \faGithub\href{https://www.github.com/huwcheston}{\underline{GitHub}} \hspace{4pt} $\mid$ \hspace{4pt} \faBook\href{https://scholar.google.com/citations?user=byas-BIAAAAJ&hl=en}{\underline{Google Scholar}} \hspace{4pt}}
+%------------------------------------------------------------==--------------
+%	EDUCATION 
+%----------------------------------------------------------------------------
+\section{\centerline{EDUCATION}} 
+\vspace{8pt} % Gap between title and text
+\textbf{Ph.D., Music Data Science}, University of Cambridge  \hfill \emph{expected} Summer 2025 
+\begin{itemize}[leftmargin=*]
+	\setlength\itemsep{0pt}
+		\item[--]\emph{Topic:} interpretable machine learning models for identifying music artists.
+		\item[--]Combined audio signal processing, time series analysis, information retrieval, and supervised classification algorithms to go from raw data to final model predictions end-to-end.
+		\item[--]Managed project databases spanning billions of records, several now \href{https://github.com/HuwCheston/Jazz-Trio-Database/}{open sourced}.
+   		\item[--]Deployed models online with public API to enable users to process their own recordings.
+		\item[--]Automated building and hosting project documentation with GitHub CI/CD.
+		\item[--]Fully-funded with £75k award Vice-Chancellor's award from \href{https://www.cambridgetrust.org/}{Cambridge Trust}.
+		\item[--]Developed open-source data collection software, funded by \href{https://cdh.cam.ac.uk}{Cambridge Digital Humanities}.
+		\item[--]Managed undergraduate and graduate research assistants. 
+		\item[--]Three peer-reviewed publications in major (top-20) science and computing journals.
+\end{itemize}
+
+\textbf{BA. \& MSt., Music Psychology}, University of Oxford (\emph{First Class}) \hfill 2016---2020
+\begin{itemize}[leftmargin=*]
+	\setlength\itemsep{0pt}
+		\item[--]Average of 76\% (BA) \& 85\% (MSt), \textit{graduated with highest mark in year for both courses}.
+		\item[--]MSt. study fully-funded with £25k award \& scholarship from Linacre College, Oxford.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	Experience
+%----------------------------------------------------------------------------------------
+\section{\centerline{EMPLOYMENT}}\label{sec:employment}
+\vspace{8pt} % Gap between title and text
+\textbf{Research Scientist}, PhD Internship @ Spotify \href{https://research.atspotify.com/audio-intelligence/}{[Audio Intelligence lab]} \hfill Summer 2024
+\begin{itemize}[leftmargin=*]
+	\setlength\itemsep{0pt}
+		\item[--]Developed end-to-end machine learning model for identifying samples (\emph{e.g.,} drum breaks) in audio recordings, facilitating downstream plagiarism detection \& recommendation.
+		\item[--]Managed pipelines for generating artificial training data at petabyte-scale in Beam \& GCS.
+		\item[--]Deployed PyTorch training runs on distributed GPU clusters using Ray \& Kubernetes
+		\item[--]Model outperformed baseline (Shazam) algorithm by 9x, setting a new state-of-the-art.
+		\item[--]Presented results to major company stakeholders \& senior research managers.
+		\item[--]Results presented in interactive web application and in a scientific publication.
+\end{itemize}
+\textbf{Module Leader}, Sutton Trust, Cambridge \hfill Summer 2023
+\begin{itemize}[leftmargin=*]
+	\setlength\itemsep{0pt}
+		\item[--]Delivered workshops in music computing for students in final years of secondary education. 
+		\item[--]Interactive module materials hosted on GitHub Pages and Google Colab.
+\end{itemize}
+\textbf{Instructor \& Lecturer}, University of Cambridge \hfill Winter 2021 --- Summer 2024
+\begin{itemize}[leftmargin=*]
+	\setlength\itemsep{0pt}
+		\item[--]Delivered 100+ supervisions for sciences \& humanities undergraduates, covering (i): statistical programming in Python and \textsf{R}, (ii) visualising \& simulating data, (iii) writing research proposals.
+		\item[--]Mentored undergraduate research projects in data science and machine learning topics.
+		\item[--]Delivered yearly undergraduate lectures on computational modelling of audio data
+		\item[--]Interactive teaching materials hosted online using \href{https://huwcheston.github.io/PS-Supervision/intro.html}{Jupyter Book}
+\end{itemize}
+\textbf{Graduate Teaching Assistant}, Kingswood School, Bath \hfill September 2020 --- June 2021
+\begin{itemize}[leftmargin=*]
+	\setlength\itemsep{0pt}
+		\item[--]Planned \& taught music technology lessons, in-classroom and virtually during COVID.
+		\item[--]Managed recording studio and produced promotional audio-visual material for the school.
+\end{itemize}
+\textbf{Musician \& Sound Engineer}, Freelance \href{https://www.youtube.com/watch?v=2ccWNviTf4A&ab_channel=HuwCheston}{[Showreel]} \hfill September 2016 ---
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section{\centerline{TECHNICAL SKILLS}}
+\vspace{16pt} % Gap between title and text
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{0pt}
+    \item[--]\textbf{Languages}: Python \faPython, \textsf{R}, JavaScript, HTML/CSS, SQL
+    \item[--]\textbf{Developer Tools}: \faGit, \LaTeX, Docker, Google Cloud Platform, Apache Beam
+    \item[--]\textbf{Libraries}: pandas, NumPy, PyTorch, Scikit-Learn, Matplotlib, SciPy, Statsmodels, OpenCV, Ray, NLTK
+\vspace{0pt}
+\end{itemize}
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+\section{\centerline{REFERENCES AVAILABLE ON REQUEST}}
+\end{resume} 
+\end{document}
