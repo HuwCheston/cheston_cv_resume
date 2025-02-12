@@ -1,2 +1,5 @@
+/old/*
+/_deprecated/*
+
 *.log
 *.gz

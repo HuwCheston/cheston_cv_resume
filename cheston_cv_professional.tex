@@ -1,102 +1,110 @@
-\documentclass[10pt]{stylesheet} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
-\usepackage{helvet} % Default font is the helvetica postscript font
-%\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
-\usepackage[colorlinks=true, urlcolor=blue, linkcolor=red]{hyperref}
-\usepackage{hyperref,textcomp,fontawesome5,fancyhdr,hanging,enumitem}
-\usepackage[a4paper,
-            left=1in,
-            right=1in,
-            top=.75in,
-            bottom=.75in,
-            footskip=.25in]{geometry}
-\newsectionwidth{0pt} % Stops section indenting
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{res_professional}
+\input{glyphtounicode}
+
+
 \begin{document}
-%----------------------------------------------------------------------------------------
-%	NAME AND ADDRESS(ES)
-%----------------------------------------------------------------------------------------
-\name{HUW WILLIAM CHESTON}
-%----------------------------------------------------------------------------------------
-\begin{resume}
-%------------------------------------------------------------==--------------
-\centerline{\faEnvelope\href{mailto:hwc31@cam.ac.uk}{\underline{Email}} \hspace{4pt} $\mid$ \hspace{4pt} \faGlobe\href{https://huwcheston.github.io/}{\underline{Webpage}} \hspace{4pt} $\mid$ \hspace{4pt} \faGithub\href{https://www.github.com/huwcheston}{\underline{GitHub}} \hspace{4pt} $\mid$ \hspace{4pt} \faBook\href{https://scholar.google.com/citations?user=byas-BIAAAAJ&hl=en}{\underline{Google Scholar}} \hspace{4pt}}
-%------------------------------------------------------------==--------------
-%	EDUCATION 
-%----------------------------------------------------------------------------
-\section{\centerline{EDUCATION}} 
-\vspace{8pt} % Gap between title and text
-\textbf{Ph.D., Music Data Science}, University of Cambridge  \hfill \emph{expected} Summer 2025 
-\begin{itemize}[leftmargin=*]
-	\setlength\itemsep{0pt}
-		\item[--]\emph{Topic:} interpretable machine learning models for identifying music artists.
-		\item[--]Combined audio signal processing, time series analysis, information retrieval, and supervised classification algorithms to go from raw data to final model predictions end-to-end.
-		\item[--]Managed project databases spanning billions of records, several now \href{https://github.com/HuwCheston/Jazz-Trio-Database/}{open sourced}.
-   		\item[--]Deployed models online with public API to enable users to process their own recordings.
-		\item[--]Automated building and hosting project documentation with GitHub CI/CD.
-		\item[--]Fully-funded with £75k award Vice-Chancellor's award from \href{https://www.cambridgetrust.org/}{Cambridge Trust}.
-		\item[--]Developed open-source data collection software, funded by \href{https://cdh.cam.ac.uk}{Cambridge Digital Humanities}.
-		\item[--]Managed undergraduate and graduate research assistants. 
-		\item[--]Three peer-reviewed publications in major (top-20) science and computing journals.
-\end{itemize}
 
-\textbf{BA. \& MSt., Music Psychology}, University of Oxford (\emph{First Class}) \hfill 2016---2020
-\begin{itemize}[leftmargin=*]
-	\setlength\itemsep{0pt}
-		\item[--]Average of 76\% (BA) \& 85\% (MSt), \textit{graduated with highest mark in year for both courses}.
-		\item[--]MSt. study fully-funded with £25k award \& scholarship from Linacre College, Oxford.
-\end{itemize}
+%----------HEADING----------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textsc{\href{https://huwcheston.github.io/}{\Large Huw Cheston}} & \textsc{London, UK} \\ 
+  \href{https://huwcheston.github.io/}{Website} --- \href{https://scholar.google.com/citations?user=byas-BIAAAAJ\&hl=en}{Google Scholar} --- \href{https://github.com/huwcheston}{GitHub} & \href{mailto:hwc31@cam.ac.uk}{hwc31@cam.ac.uk} \\
+\end{tabular*}
 
-%----------------------------------------------------------------------------------------
-%	Experience
-%----------------------------------------------------------------------------------------
-\section{\centerline{EMPLOYMENT}}\label{sec:employment}
-\vspace{8pt} % Gap between title and text
-\textbf{Research Scientist}, PhD Internship @ Spotify \href{https://research.atspotify.com/audio-intelligence/}{[Audio Intelligence lab]} \hfill Summer 2024
-\begin{itemize}[leftmargin=*]
-	\setlength\itemsep{0pt}
-		\item[--]Developed end-to-end machine learning model for identifying samples (\emph{e.g.,} drum breaks) in audio recordings, facilitating downstream plagiarism detection \& recommendation.
-		\item[--]Managed pipelines for generating artificial training data at petabyte-scale in Beam \& GCS.
-		\item[--]Deployed PyTorch training runs on distributed GPU clusters using Ray \& Kubernetes
-		\item[--]Model outperformed baseline (Shazam) algorithm by 9x, setting a new state-of-the-art.
-		\item[--]Presented results to major company stakeholders \& senior research managers.
-		\item[--]Results presented in interactive web application and in a scientific publication.
-\end{itemize}
-\textbf{Module Leader}, Sutton Trust, Cambridge \hfill Summer 2023
-\begin{itemize}[leftmargin=*]
-	\setlength\itemsep{0pt}
-		\item[--]Delivered workshops in music computing for students in final years of secondary education. 
-		\item[--]Interactive module materials hosted on GitHub Pages and Google Colab.
-\end{itemize}
-\textbf{Instructor \& Lecturer}, University of Cambridge \hfill Winter 2021 --- Summer 2024
-\begin{itemize}[leftmargin=*]
-	\setlength\itemsep{0pt}
-		\item[--]Delivered 100+ supervisions for sciences \& humanities undergraduates, covering (i): statistical programming in Python and \textsf{R}, (ii) visualising \& simulating data, (iii) writing research proposals.
-		\item[--]Mentored undergraduate research projects in data science and machine learning topics.
-		\item[--]Delivered yearly undergraduate lectures on computational modelling of audio data
-		\item[--]Interactive teaching materials hosted online using \href{https://huwcheston.github.io/PS-Supervision/intro.html}{Jupyter Book}
-\end{itemize}
-\textbf{Graduate Teaching Assistant}, Kingswood School, Bath \hfill September 2020 --- June 2021
-\begin{itemize}[leftmargin=*]
-	\setlength\itemsep{0pt}
-		\item[--]Planned \& taught music technology lessons, in-classroom and virtually during COVID.
-		\item[--]Managed recording studio and produced promotional audio-visual material for the school.
-\end{itemize}
-\textbf{Musician \& Sound Engineer}, Freelance \href{https://www.youtube.com/watch?v=2ccWNviTf4A&ab_channel=HuwCheston}{[Showreel]} \hfill September 2016 ---
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
 
-%----------------------------------------------------------------------------------------
-%	TECHNICAL SKILLS
-%----------------------------------------------------------------------------------------
-\section{\centerline{TECHNICAL SKILLS}}
-\vspace{16pt} % Gap between title and text
-\begin{itemize}[leftmargin=*]
-\setlength\itemsep{0pt}
-    \item[--]\textbf{Languages}: Python \faPython, \textsf{R}, JavaScript, HTML/CSS, SQL
-    \item[--]\textbf{Developer Tools}: \faGit, \LaTeX, Docker, Google Cloud Platform, Apache Beam
-    \item[--]\textbf{Libraries}: pandas, NumPy, PyTorch, Scikit-Learn, Matplotlib, SciPy, Statsmodels, OpenCV, Ray, NLTK
-\vspace{0pt}
-\end{itemize}
-%----------------------------------------------------------------------------------------
-%	REFERENCES
-%----------------------------------------------------------------------------------------
-\section{\centerline{REFERENCES AVAILABLE ON REQUEST}}
-\end{resume} 
+    \resumeSubheading
+      {Research Scientist Intern (Audio Intelligence)}{June -- August 2024}
+      {Spotify}{London, UK}
+      \resumeItemListStart
+        \resumeItem{Developed end-to-end deep learning model for identifying copyrighted samples in catalogue audio recordings, \textbf{driving downstream product applications} in music content categorisation \& plagiarism detection}
+        \resumeItem{Results \textbf{outperformed competing system (``Shazam'') by 9x}, improved upon internal model by \textbf{13\%}}
+        \resumeItem{Managed pipelines for generating artificial training data at \textbf{petabyte-scale} using Google Cloud \& Apache Beam}
+        \resumeItem{Deployed training runs on distributed GPU clusters using Ray \& Kubernetes}
+        \resumeItem{\textbf{Presented results} to senior company stakeholders and in a scientific paper \href{https://arxiv.org/abs/2502.06364}{[accessible at arXiv:2502.06364]}}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Music Computing Lecturer + Supervisor}{2021 -- 2024}
+      {University of Cambridge}{Cambridge, UK}
+      \resumeItemListStart
+      \resumeItem{Delivered \textbf{100+} undergraduate supervisions and lectures on  modelling and visualisation of audio data}
+      \resumeItem{\textbf{Managed} four undergraduate students on music-related data science and machine learning projects}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Science Instructor}{2023}
+      {Sutton Trust}{Cambridge, UK}
+      \resumeItemListStart
+        \resumeItem{Delivered workshops on music + data science for secondary-age students from underprivileged backgrounds}
+        \resumeItem{Designed interactive coding and statistics exercises on Google Colab, hosted on GitHub Pages}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Teaching Assistant}{2020 -- 2021}
+      {Kingswood School}{Bath, UK}
+      \resumeItemListStart
+      \resumeItem{Planned \& taught music technology lessons, both in-classroom and virtually during COVID}
+      \resumeItem{Managed recording studio and music technology suite, produced promotional audio-visual material for the school}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Professional Musician}{2016 -- 2020}
+      {Freelance}{UK}
+      \resumeItemListStart
+      \resumeItem{Worked with internationally recognised acts including \textit{Clean Bandit}, \textit{Everything Everything}, \textit{Dinosaur}}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Cambridge}{2021 -- 2025}
+      {Ph.D, Music Computing}{Cambridge, UK}
+      \resumeItemListStart
+        \resumeItem{\textbf{Advanced state-of-the-art} in music computing tasks including automatic performer identification}
+        \resumeItem{Three \textbf{peer-reviewed computer science} publications in major (top-20) scientific journals}
+        \resumeItem{Fully-funded with £75k competitive research grant from Cambridge Trust}
+      \resumeItemListEnd
+    \resumeSubheading
+      {University of Oxford}{2016 -- 2020}
+      {BA + MSt., Music Psychology}{Oxford, UK}
+      \resumeItemListStart
+        \resumeItem{Graduated with \textbf{highest mark in year}, 85\% average}
+        \resumeItem{Fully-funded masters study with £25k research grant from Linacre College, Oxford}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Stats}{: multi-level modelling, NHST workflows, time-series analysis, experiment design, optimisation} \\
+     \textbf{Inference}{: simulation, AB testing, hypothesis testing, bootstrapping, causal inference, dimensionality reduction,} \\
+     \textbf{Machine Learning}{: explainability, model selection, artificial datasets, language modelling, neural networks, big data} \\
+     \textbf{Languages}{: Python, JavaScript, HTML/CSS, R, SQL} \\
+     \textbf{Tools}{: Git, Unix, \LaTeX, Google Cloud Platform, Apache Beam, Docker, Ray} \\
+     \textbf{Libraries}{: pandas, matplotlib, plotly, seaborn, scikit-learn, pytorch, statsmodels, numpy, librosa, ggplot2, captum} \\
+     \textbf{Domain Knowledge}{: music content categorisation + retrieval, audio signal processing, explainable AI, applied stats}
+    }}
+ \end{itemize}
+
+\section{References Available on Request}
+
+%-------------------------------------------
 \end{document}
