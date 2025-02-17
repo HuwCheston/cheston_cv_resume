@@ -11,10 +11,22 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{res_professional}
+\usepackage{res}
 \usepackage{fontawesome5}
+\usepackage{csquotes}
 \input{glyphtounicode}
 
+%for the bibliography
+\usepackage[
+    style=apa,
+    sortcites=true,
+    backend=biber,natbib,
+    labeldate=year
+]{biblatex}
+\addbibresource{publications.bib}
+% Ensure only the year is displayed in citations & references
+\AtEveryBibitem{\clearfield{month}\clearfield{day}\clearfield{date}}
+\AtEveryCitekey{\clearfield{month}\clearfield{day}\clearfield{date}}
 
 \begin{document}
 
@@ -80,9 +92,13 @@
       {University of Cambridge}{2021 -- 2025}
       {Ph.D, Music Computing}{Cambridge, UK}
       \resumeItemListStart
+        % comment out for "professional"/non-academic
+        \resumeItem{\textbf{Thesis title}: Computational Modelling of Jazz Improvisation}
         \resumeItem{\textbf{Advanced state-of-the-art} in music computing tasks including automatic performer identification}
-        \resumeItem{Published \textbf{3 peer-reviewed computer science} papers in major (top-20) scientific journals}
+        \resumeItem{Published \textbf{3 peer-reviewed} papers in major (top-20) scientific journals}
         \resumeItem{Fully-funded with £75k competitive research grant from Cambridge Trust}
+        % comment out for "professional"/non-academic
+        \resumeItem{\textbf{Service:} peer review for \textit{Transactions of the International Society of Music Information Retrieval}, \textit{Music \& Science} journals}
       \resumeItemListEnd
     \resumeSubheading
       {University of Oxford}{2016 -- 2020}
@@ -102,12 +118,25 @@
      \textbf{Machine Learning}{: explainability, model selection, artificial datasets, language modelling, neural networks, big data} \\
      \textbf{Languages}{: Python, JavaScript, HTML/CSS, R, SQL} \\
      \textbf{Tools}{: Git, Unix, \LaTeX, Google Cloud Platform, Apache Beam, Docker, Ray} \\
-     \textbf{Libraries}{: pandas, matplotlib, plotly, seaborn, scikit-learn, pytorch, statsmodels, numpy, librosa, ggplot2, captum} \\
-     \textbf{Domain Knowledge}{: music content categorisation + retrieval, audio signal processing, explainable AI, applied stats}
+     \textbf{Libraries}{: pandas, matplotlib, plotly, scipy, scikit-learn, pytorch, statsmodels, numpy, librosa, ggplot2, captum} \\
+     \textbf{Domain Knowledge}{: music categorisation, classification, \& retrieval, audio signal processing, explainable AI}
     }}
  \end{itemize}
 
-\section{References Available on Request}
+
+%-----------PUBLICATIONS-----------
+% comment out for "professional"/non-academic
+\section{Selected Publications}
+\nocite{*}
+  \resumeSubHeadingListStart
+    \resumeSubheading{Journal Articles}{}{}{}
+    \printbibliography[heading=none, keyword=paper]
+    \resumeSubheading{Preprints}{}{}{}
+    \printbibliography[heading=none, keyword=preprint]
+    \resumeSubheading{Conference Proceedings}{}{}{}
+    \printbibliography[heading=none, keyword=proceedings]
+\resumeSubHeadingListEnd
 
 %-------------------------------------------
+\section{References Available on Request}
 \end{document}
